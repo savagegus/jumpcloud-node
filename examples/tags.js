@@ -1,5 +1,6 @@
 var JumpCloud = require('jumpcloud');
-var jc = new JumpCloud("XXXapikeyXXX");
+var apikey = process.env.JCAPIKEY;
+var jc = new JumpCloud(apikey);
 
 jc.getAllTags(function(x){
     console.log(x.results);
