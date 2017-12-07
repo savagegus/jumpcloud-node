@@ -1,4 +1,4 @@
-var JumpCloud = require('jumpcloud');
+var JumpCloud = require('../lib/jumpcloud');
 var apikey = process.env.JCAPIKEY;
 var jc = new JumpCloud(apikey);
 

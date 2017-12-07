@@ -1,4 +1,4 @@
-var JumpCloud = require('jumpcloud');
+var JumpCloud = require('../lib/jumpcloud.js');
 var apikey = process.env.JCAPIKEY;
 var jc = new JumpCloud(apikey);
 
@@ -13,7 +13,7 @@ jc.getAllUsers(function(x){
 /***********/
 //var filter =  [{"email" : { "$regex" : "trueaccord.com$"}}];
 var filter =  [{"username" : "fuser"}];
-jc.searchUser(filter,function(x){
+jc.searchUsers(filter,function(x){
   for(a=0;a<x.results.length;a++){
     console.log("Username/ID: " + x.results[a].username + " / " +  x.results[a]._id);
   }
